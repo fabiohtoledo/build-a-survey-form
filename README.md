@@ -3,7 +3,7 @@
 
 
 **Repository**: [github.com/fabiohtoledo/build-a-survey-form](https://github.com/fabiohtoledo/build-a-survey-form)  
-**Live Demo**: [Live Demo](#https://fabiohtoledo.github.io/build-a-survey-form/)
+**Live Demo**: [fabiohtoledo.github.io/build-a-survey-form/](https://fabiohtoledo.github.io/build-a-survey-form/)
 
 ---
 
@@ -91,3 +91,4 @@ Este projeto é um formulário de pesquisa criado para coletar feedback, sugest�
 *Project developed as part of the freeCodeCamp Responsive Web Design Certification.*  
 
 *Projeto desenvolvido como parte da certificação "Responsive Web Design" do freeCodeCamp.*
+
