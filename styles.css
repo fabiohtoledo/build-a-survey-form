@@ -1,0 +1,304 @@
+/* font import: barlow */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --background: rgb(20, 47, 82);
+  --background-opacity: rgb(20, 47, 82, 0.9);
+  --bg-secundary: #d7ceff;
+
+
+  --primary: #3a8dde;
+  --primary-hover: #9376e2;
+  --text-light: #d0e4ff;
+  --text-dark: #30475e;
+}
+
+
+/* Global */
+body{
+  align-items: center;
+  text-align: center;
+  font-family: 'barlow', sans-serif;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('https://i.postimg.cc/kMWVXXP1/bg05.png');
+/* Used the site https://postimg.cc to host images. Will upload to git when used in portifólio */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 80vh;
+  color: #fff;
+}
+main{
+  width: 70vw;
+  margin: 2rem auto;
+  min-width: 500px;
+}
+legend{
+  font-weight: 700;
+  padding: 0 5px 0 5px;
+  font-size: 1.1rem;
+}
+@media (min-width: 576px) {
+  main {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 720px;
+  }
+}
+fieldset{
+  padding: 10px 10px;
+  max-width: 550px;
+}
+
+
+/* Form */
+#survey-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 40px auto;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  background-color: var(--background-opacity);
+}
+label{
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+/* fieldset label{
+  font-size: 1rem;
+} */
+
+
+/* name */
+input[type=text] {
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 10px;
+  width: 50vw;
+  min-width: 350px;
+  max-width: 550px;
+  transition: all 0.2 ease;
+  outline: none;
+}
+
+/* age */
+input[type=number] {
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 10px;
+  width: 50vw;
+  min-width: 350px;
+  max-width: 550px;
+  transition: all 0.2 ease;
+  outline: none;
+}
+
+/* e-mail */
+input[type=email] {
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 10px;
+  width: 50vw;
+  min-width: 350px;
+  max-width: 550px;
+  transition: all 0.4s ease;
+  outline: none;
+}
+/* hover/focus */
+input[type=text]:hover, input[type=number]:hover, input[type=email]:hover{
+  border-color: var(--primary-hover);
+  background-color: var(--bg-secundary);
+}
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus{
+  border-color: var(--primary-hover);
+  background-color: var(--bg-secundary);
+}
+
+/* how hear */
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  cursor: pointer;
+}
+select,
+::picker(select) {
+  appearance: base-select;
+}
+select:hover,
+select:focus {
+  background: var(--bg-secundary);
+}
+::picker(select) {
+  border: none;
+}
+option {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+
+  border: 1px solid var(--primary);
+  background-color: var(--text-light);
+  padding: 10px;
+  transition: 0.4s;
+}
+option:hover, option:focus{
+  background-color: var(--bg-secundary);
+}
+/* https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select */
+
+
+/* this is a */
+#radio-fs{
+  display: flex;
+  flex-direction: row;
+}
+#radio-fs label{
+  margin: 10px;
+  /* border: 1px solid var(--primary); */
+  background-color: var(--primary);
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid var(--primary);
+  transition: border 0.2s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+#radio-fs label:hover{
+  transform: scale(1.1);
+  border: 2px solid;
+}
+
+
+/* about */
+#about{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#about label{
+  margin-bottom: 5px;
+  padding: 10px 20px 10px 30px;
+  background-color: var(--primary);
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid var(--primary);
+}
+/* Custom Checkbox */
+#about input[type='checkbox'] { /* hide default cb */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark { /* Create a custom checkbox */
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+/* hover color */
+#about input[type='checkbox']:hover ~ .checkmark {
+  background-color: var(--text-light);
+}
+/* When the checkbox is checked, */
+#about input[type='checkbox']:checked ~ .checkmark {
+  background-color: rgb(216, 249, 255);
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+#about input[type='checkbox']:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 2px;
+  height: 5px;
+  border: solid var(--primary);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#about label:hover{
+  transform: scale(1.1);
+  border: 2px solid;
+}
+/* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+
+
+
+/* tell us more */
+textarea {
+  width: 100%;
+  min-height: 7rem;
+  min-width: 350px;
+  width: 50vw;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  resize: vertical;
+  transition: border-color 0.4s ease, background-color 0.4s ease;
+  outline: none;
+  max-width: 550px;
+}
+textarea:hover, textarea:focus{
+  border-color: var(--primary-hover);
+  background-color: var(--bg-secundary);
+}
+/* https://css-tricks.com/textarea-tricks/ */
+
+/* submit */
+button{
+  padding: 20px 30px;
+  max-width: 200px;
+  font-size: 1rem;
+  border: none;
+  transition: all 0.2s ease;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid var(--primary);
+}
+button:hover{
+  box-shadow: 0 0 20px var(--primary-hover);
+  transform: scale(1.01);
+  border: 2px solid;
+}

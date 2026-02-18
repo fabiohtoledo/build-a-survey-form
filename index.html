@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey form</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1 id="title">Improvement Survey</h1>
+        <p id="description">Thank you for taking the time to help us improve!</p>
+      </header>
+
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Name:</label>
+          <input id="name" type="text" placeholder="Full Name Here" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" id="email-label">E-mail:</label>
+          <input id="email" type="email" placeholder="We will not send spam!" required>
+        </div>
+
+        <div class="form-group">
+          <label for="number" id="number-label">Age:</label>
+          <input id="number" type="number" placeholder="How Old" min="18" max="110">
+        </div>
+
+        <div class="form-group">
+          <label for="dropdown">How did you hear about us?</label>
+          <select id="dropdown" name="source">
+            <option value="">(Select One)</option>
+            <option value="instagram">Instagram</option>
+            <option value="twitter">Twitter</option>
+            <option value="facebook">Facebook</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group" id="radio-fs">
+          <legend>This is a:</legend>
+          <label><input type="radio" name="type" value="recommendation"> Recommendation</label>
+          <label><input type="radio" name="type" value="issue"> Issue with some site</label>
+        </fieldset>
+
+        <fieldset class="form-group" id="about">
+          <legend>It's about:</legend>
+          <label>HTML
+            <input type="checkbox" value="html" > 
+            <span class="checkmark"></span>
+          </label>
+          <label>CSS
+            <input type="checkbox" value="css" > 
+            <span class="checkmark"></span>
+          </label>
+          <label>JS
+            <input type="checkbox" value="js" >
+            <span class="checkmark"></span>
+          </label>
+          <label>None
+            <input type="checkbox" value="none" >
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="content">Tell us more:</label>
+          <textarea id="content" placeholder="Explain your problem, opinion or recommendation!"></textarea>
+        </div>
+
+        <div class="form-group">
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+
+</html>
